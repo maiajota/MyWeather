@@ -59,7 +59,6 @@ export function Home() {
 		});
 
 		setCity(resApi.data.name);
-		console.log(resApi.data);
 	}
 
 	return (
