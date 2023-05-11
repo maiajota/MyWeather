@@ -11,7 +11,7 @@ import {
 	HomeContainer,
 } from './styles';
 
-const apiKey = '514d2c2ab2d3fce3c2915883fbbac4f6';
+const apiKey = import.meta.env.VITE_VALUE_API_KEY;
 
 const newSearchFormSchema = zod.object({
 	cityName: zod.string().min(1, 'Informe o nome da cidade'),
@@ -47,7 +47,6 @@ export function Home() {
 		const city = data.cityName;
 		const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=pt_br`;
 		const reqApi = axios.get(apiUrl);
-		console.log(reqApi);
 
 		const resApi = await reqApi;
 		setWeather({
