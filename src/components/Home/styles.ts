@@ -22,6 +22,7 @@ export const HomeContainer = styled.div`
 
 	@media (max-width: 680px) {
 		width: 90%;
+		height: 100vh;
 		display: flex;
 		flex-direction: column;
 		margin: 5rem auto;
