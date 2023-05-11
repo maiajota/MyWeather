@@ -9,7 +9,8 @@ MyWeather é uma aplicação simples e intuitiva para o usuário buscar informa�
 
 
 <p align="center">
-![Screenshot_3](https://github.com/maiajota/MyWeather/assets/85450778/f1a5e621-2e98-446b-8ac7-93b7eb7fa56b)
+  
+![Screenshot](https://github.com/maiajota/MyWeather/assets/85450778/51beff17-ad3a-4ac2-88f9-89c2eea7c6dc)
 
 ![mobile](https://github.com/maiajota/MyWeather/assets/85450778/ec324197-baf6-4302-b4af-e6a214684eab)
 
@@ -47,11 +48,6 @@ Inicie o servidor
 Para rodar esse projeto localmente, você vai precisar adicionar as seguintes variáveis de ambiente no seu .env
 
 `VITE_VALUE_API_KEY = (Chave da API da OpenWeather)`
-
-
-## 🔗 Links
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/)
-
 
 
 ## Stack utilizada
