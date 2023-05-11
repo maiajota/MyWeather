@@ -74,7 +74,7 @@ export function Home() {
 					/>
 				</FormContainer>
 				<ButtonForm disabled={isSubmitDisabled} type="submit">
-					Search
+					Buscar
 					<MagnifyingGlass size={18} />
 				</ButtonForm>
 			</form>
