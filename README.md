@@ -12,9 +12,8 @@ MyWeather é uma aplicação simples e intuitiva para o usuário buscar informa�
   
 ![Screenshot](https://github.com/maiajota/MyWeather/assets/85450778/51beff17-ad3a-4ac2-88f9-89c2eea7c6dc)
 
-<p align="center" width="100%">
 ![mobile](https://github.com/maiajota/MyWeather/assets/85450778/ec324197-baf6-4302-b4af-e6a214684eab)
-</p>
+
 
 ## Rodando localmente
 
