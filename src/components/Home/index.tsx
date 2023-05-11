@@ -34,14 +34,16 @@ export function Home() {
 		name: '',
 		desc: '',
 		temp: '',
+		icon: '',
 	});
 
 	const cityNameWatch = watch('cityName');
 	const isSubmitDisabled = !cityNameWatch;
 
-	const isWeatherTempEmpty = weather.temp != '';
-	const isWeatherDescEmpty = weather.desc != '';
-	const isWeatherNameEmpty = weather.name != '';
+	const hasWeatherImage = weather.icon != '';
+	const hasWeatherTemp = weather.temp != '';
+	const hasWeatherDesc = weather.desc != '';
+	const hasWeatherName = weather.name != '';
 
 	async function handleApiCall(data: NewSearchFormData) {
 		const city = data.cityName;
@@ -53,9 +55,11 @@ export function Home() {
 			name: resApi.data.name,
 			desc: resApi.data.weather[0].description,
 			temp: Math.floor(resApi.data.main.temp).toString(),
+			icon: resApi.data.weather[0].icon,
 		});
 
 		setCity(resApi.data.name);
+		console.log(resApi.data);
 	}
 
 	return (
@@ -77,10 +81,17 @@ export function Home() {
 			</form>
 
 			<DetailContainer>
-				<img src="https://openweathermap.org/img/wn/02d@2x.png" alt="" />
-				<h1>{isWeatherTempEmpty ? weather.temp + '°C' : '???'}</h1>
-				<span>{isWeatherDescEmpty ? weather.desc : '???'}</span>
-				<p>{isWeatherNameEmpty ? city : '?????'}</p>
+				<img
+					src={
+						hasWeatherImage
+							? `https://openweathermap.org/img/wn/${weather.icon}@2x.png`
+							: 'https://openweathermap.org/img/wn/02d@2x.png'
+					}
+					alt=""
+				/>
+				<h1>{hasWeatherTemp ? weather.temp + '°C' : '???'}</h1>
+				<span>{hasWeatherDesc ? weather.desc : '???'}</span>
+				<p>{hasWeatherName ? city : '?????'}</p>
 			</DetailContainer>
 		</HomeContainer>
 	);
