@@ -68,7 +68,7 @@ export function Home() {
 					<input
 						type="text"
 						id=""
-						placeholder="City Name"
+						placeholder="Nome da cidade"
 						autoComplete="off"
 						{...register('cityName')}
 					/>
